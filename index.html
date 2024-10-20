@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your expenses and save money with BudgetWise.">
+  <title>BudgetWise - Smart Budget Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="logo">BudgetWise</div>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#budget-tips">Budget Tips</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    <div class="hero-content">
+      <h1>Take Control of Your Finances with <span>BudgetWise</span></h1>
+      <p>Track expenses, plan budgets, and achieve your financial goals with ease.</p>
+      <a href="#signup" class="cta-button">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <h2>Features</h2>
+    <div class="features-container">
+      <div class="feature-item">
+        <h3>Expense Tracking</h3>
+        <p>Log and track your daily expenses effortlessly.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Budget Planning</h3>
+        <p>Plan and set monthly budgets to manage your money wisely.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Insights & Reports</h3>
+        <p>Get detailed insights and reports on your spending habits.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Budget Calculator Section -->
+<section id="budget-calculator" class="budget-calculator-section">
+    <h2>Calculate Your Budget</h2>
+    <p>Enter your family size and monthly income, and we'll propose a budget for you.</p>
+  
+    <form id="budget-form">
+      <label for="family-size">Family Size:</label>
+      <input type="number" id="family-size" name="family-size" placeholder="e.g., 4" required>
+  
+      <label for="monthly-income">Monthly Income (in $):</label>
+      <input type="number" id="monthly-income" name="monthly-income" placeholder="e.g., 5000" required>
+  
+      <button type="submit" class="cta-button">Calculate Budget</button>
+    </form>
+  
+    <div id="budget-result" class="budget-result" style="display: none;">
+      <h3>Your Proposed Budget</h3>
+      <ul id="budget-breakdown"></ul>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About BudgetWise</h2>
+    <p>BudgetWise is designed to help you save money, manage expenses, and make smart financial decisions. Our mission is to make budgeting simple and effective for everyone.</p>
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <h2>Stay Updated</h2>
+    <p>Sign up to get notified when BudgetWise launches!</p>
+    <form id="signup-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="cta-button">Notify Me</button>
+    </form>
+    <p id="success-message" style="display:none;">Thank you! We'll notify you when BudgetWise is live.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 BudgetWise. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
