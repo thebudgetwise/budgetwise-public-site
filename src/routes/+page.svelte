@@ -6,6 +6,7 @@
 	import Features from './Features.svelte';
 	import Hero from './Home.svelte';
 	import Portifolio from './Portifolio.svelte';
+	import Pricing from './Pricing.svelte';
 	
 </script>
 
@@ -18,6 +19,6 @@
 <Features />
 <About />
 <App />
-<Portifolio />
-<Download />
+<Pricing />
 <Contact />
+<Download />

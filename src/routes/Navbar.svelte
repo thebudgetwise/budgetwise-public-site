@@ -25,7 +25,7 @@
 	});
 </script>
 
-<nav class="navbar {distanceScrolled > 0 ? 'glass' : null}  navbar-expand-lg bg-none">
+<nav class="navbar {distanceScrolled > 0 ? 'bg-glass' : null}  navbar-expand-lg bg-none">
 	<div class="container">
 		<a class="navbar-brand" href="#home">BWealthy</a>
 		<button
@@ -72,6 +72,14 @@
 						on:click={() => selectSection('app')}>App</a
 					>
 				</li>
+				
+				<li class="nav-item">
+					<a
+						class="nav-link {activeSection == 'pricing' ? 'active' : undefined}"
+						href="#pricing"
+						on:click={() => selectSection('pricing')}>Pricing</a
+					>
+				</li>
 
 				<li class="nav-item">
 					<a
@@ -103,21 +111,7 @@
 		transition: background-color 0.5s ease;
 	}
 
-	.glass {
-		box-shadow:
-			inset 1px 1px rgba(255, 255, 255, 0.2),
-			inset -1px -1px rgba(255, 255, 255, 0.1),
-			1px 3px 24px -1px rgba(0, 0, 0, 0.15);
-		background-color: transparent;
-		background-image: linear-gradient(
-			125deg,
-			rgba(255, 255, 255, 0.3),
-			rgba(255, 255, 255, 0.2) 70%
-		);
-		-webkit-backdrop-filter: blur(5px);
-		backdrop-filter: blur(5px);
-		--bs-secondary-rgb: transparent;
-	}
+	
 
 	.collapse {
 		transition: all 0.5s ease;

@@ -1,23 +1,23 @@
 <section class="page-section service" id="features">
 	<div class="container" data-aos="fade-up" data-aos-delay="500">
-		<h2 class="text-center">Features</h2>
+		<h2 class="text-center">Why BWealthy</h2>
 		<div class="small-container">
 			<div class="card bg-secondary" data-aos="zoom-up" data-aos-delay="600">
 				<div class="card-body">
-					<div class="bg-success circle">$</div>
+					<div class="bg-success circle"><i class="bi-laptop fs-1"></div>
 					<h2 class="card-title">Home</h2>
-					<h5 class="card-title">Expose Tracking</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet</p>
+					<h5 class="card-title">Easy-to-use Interface</h5>
+					<p class="card-text">Intuitive design to simplify your budgeting experience.</p>
 					<a href="#" class="btn btn-primary rounded-pill">Get Started</a>
 				</div>
 			</div>
 
 			<div class="card bg-success" data-aos="zoom-up" data-aos-delay="700">
 				<div class="card-body">
-					<div class=" circle">$</div>
-					<h2 class="card-title text-white">Feature</h2>
-					<h5 class="card-title">Expose Tracking</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet</p>
+					<div class=" circle"><i class="bi-phone fs-1"></div>
+					<h2 class="card-title text-white">Realtime</h2>
+					<h5 class="card-title">Expense Tracking</h5>
+					<p class="card-text">Track your spending as it happens in real-time.</p>
 					<a href="#app" class="btn btn-primary rounded-pill">Learn more!</a>
 				</div>
 			</div>
@@ -25,30 +25,30 @@
 			<div class="card bg-primary" data-aos="zoom-up" data-aos-delay="800">
 				<div class="card-body">
 					<div class="bg-silver circle">$</div>
-					<h2 class="card-title text-white">Abount</h2>
+					<h2 class="card-title text-white">Pricing</h2>
 					<h5 class="card-title">Expose Tracking</h5>
 					<p class="card-text">Lorem ipsum dolor sit amet</p>
-					<a href="#about" class="btn btn-primary rounded-pill">Learn more!</a>
+					<a href="#pricing" class="btn btn-primary rounded-pill">Learn more!</a>
 				</div>
 			</div>
 
 			<div class="card bg-info" data-aos="zoom-up" data-aos-delay="900">
 				<div class="card-body">
-					<div class="circle">#</div>
-					<h2 class="card-title text-white">Contact</h2>
-					<h5 class="card-title">Expose Tracking</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet</p>
+					<div class="circle"><i class="bi-table fs-1"></div>
+					<h2 class="card-title text-white">Reports</h2>
+					<h5 class="card-title">& Analytics</h5>
+					<p class="card-text">Get insights into your spending habits with detailed reports.</p>
 					<a href="#contact" class="btn btn-primary rounded-pill">Learn more!</a>
 				</div>
 			</div>
 
 			<div class="card bg-secondary" data-aos="zoom-up" data-aos-delay="1000">
 				<div class="card-body-bg"></div>
-				<div class="card-body">
-					<div class="bg-success circle">%</div>
-					<h2 class="card-title">App</h2>
-					<h5 class="card-title">Expose Tracking</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet</p>
+				<div class="card-body px-2">
+					<div class="bg-success circle"><i class="bi-person fs-1"></div>
+					<h4 class="card-title">Customizable</h4>
+					<h5 class="card-title">Categories</h5>
+					<p class="card-text">Create categories that suit your financial goals.</p>
 					<a href="#app" class="btn btn-primary rounded-pill">Learn more!</a>
 				</div>
 			</div>
@@ -65,18 +65,10 @@
 		grid-template-columns: repeat(auto-fill, minmax(194px, 1fr));
 	}
 	.service {
-		
-		/* background-color: #d9d7d8; */
+		background-color: #d9d7d8;
 	}
 
 	.card {
-		/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.4),  11px 11px 11px rgba(0, 0, 0, 0.1); */
-
-		/* box-shadow: ; */
-		box-shadow:
-			0.1em 0.1em 0.2em rgba(0, 0, 0, 0.4),
-			1.1em 1.1em 1.1em rgba(0, 0, 0, 0.1),
-			inset 5rem 5rem 5rem rgba(255, 255, 255, 0.2);
 		overflow: hidden;
 		margin-bottom: 1rem;
 

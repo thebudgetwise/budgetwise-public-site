@@ -9,7 +9,7 @@
 					praesentium autem hic tempora totam reprehenderit officia, eligendi, libero rem magnam aut
 					maiores quidem! Provident numquam eligendi sequi alias rerum.
 				</p>
-				<a class="btn btn-primary btn-lg rounded-pill" href="#app">Get Started!</a>
+				<a class="btn btn-success btn-lg rounded-pill" href="#app">Get Started!</a>
 			</div>
 		</div>
 	</div>

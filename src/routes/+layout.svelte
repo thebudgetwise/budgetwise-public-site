@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '../app.css';
 	import '../bootstrap2.css';
+	import '../app.css';
 	import Footer from './Footer.svelte';
 	import Navbar from './Navbar.svelte';
 

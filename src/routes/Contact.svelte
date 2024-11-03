@@ -9,7 +9,7 @@
     }
 </script>
 
-<section class="page-section bg-white" id="contact">
+<section class="page-section bg-light" id="contact">
     <div class="container px-4 px-lg-5" data-aos="fade-up" data-aos-delay="100">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 col-xl-6 text-center">

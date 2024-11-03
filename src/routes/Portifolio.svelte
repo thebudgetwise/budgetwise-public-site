@@ -3,7 +3,7 @@
 </script>
 
 <div id="portfolio" class="bg-light">
-	<div class="container-fluid p-0"  data-aos="zoom-out" data-aos-delay="400">
+	<div class="container-fluid p-0" data-aos="zoom-out" data-aos-delay="400">
 		<div class="row g-0">
 			<div class="col-lg-4 col-sm-6">
 				<a class="portfolio-box" href={financeImage} title="Project Name">
@@ -87,7 +87,7 @@
 		z-index: 10;
 	}
 
-    .portfolio-box-caption:hover {
-        opacity: 1;
-    }
+	.portfolio-box-caption:hover {
+		opacity: 1;
+	}
 </style>
