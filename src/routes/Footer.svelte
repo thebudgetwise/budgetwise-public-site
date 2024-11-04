@@ -11,8 +11,8 @@
 					<span class="sitename">BWealth</span>
 				</a>
 				<div class="footer-contact pt-3">
-					<p>A108 Adam Street</p>
-					<p>New York, NY 535022</p>
+					<p>985 Rue Mainguy</p>
+					<p>Quebec, QC</p>
 					<p class="mt-3"><strong>Phone:</strong> <span>+1 418 123 4567</span></p>
 					<p><strong>Email:</strong> <span>info@example.com</span></p>
 				</div>
