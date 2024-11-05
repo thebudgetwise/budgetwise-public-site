@@ -1,0 +1,126 @@
+
+body {
+    background: rgba(183,196,190,1);
+    /* background: -moz-radial-gradient(center, ellipse cover, rgba(183,196,190,1) 0%, rgba(164,184,183,1) 100%); */
+    /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(183,196,190,1)), color-stop(100%, rgba(164,184,183,1))); */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(183,196,190,1) 0%, rgba(164,184,183,1) 100%);
+    /* background: -o-radial-gradient(center, ellipse cover, rgba(183,196,190,1) 0%, rgba(164,184,183,1) 100%); */
+    /* background: -ms-radial-gradient(center, ellipse cover, rgba(183,196,190,1) 0%, rgba(164,184,183,1) 100%); */
+    /* background: radial-gradient(ellipse at center, rgba(183,196,190,1) 0%, rgba(164,184,183,1) 100%); */
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7c4be', endColorstr='#a4b8b7', GradientType=1 ); */
+}
+
+.page-section {
+    padding: 8rem 0;
+}
+
+.app {
+    padding-bottom: 0;
+}
+
+
+section h2, section h1 {
+    font-weight: 700;
+    /* font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.bg-glass {
+    box-shadow:
+        inset 1px 1px rgba(255, 255, 255, 0.2),
+        inset -1px -1px rgba(255, 255, 255, 0.1),
+        1px 3px 24px -1px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    background-image: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.2) 70%
+    );
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    --bs-secondary-rgb: transparent;
+}
+
+.barriecito-regular {
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.roboto-thin {
+font-family: "Roboto", serif;
+font-weight: 100;
+font-style: normal;
+}
+
+.roboto-light {
+font-family: "Roboto", serif;
+font-weight: 300;
+font-style: normal;
+}
+
+.roboto-regular {
+font-family: "Roboto", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.roboto-medium {
+font-family: "Roboto", serif;
+font-weight: 500;
+font-style: normal;
+}
+
+.roboto-bold {
+font-family: "Roboto", serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.roboto-black {
+font-family: "Roboto", serif;
+font-weight: 900;
+font-style: normal;
+}
+
+.roboto-thin-italic {
+font-family: "Roboto", serif;
+font-weight: 100;
+font-style: italic;
+}
+
+.roboto-light-italic {
+font-family: "Roboto", serif;
+font-weight: 300;
+font-style: italic;
+}
+
+.roboto-regular-italic {
+font-family: "Roboto", serif;
+font-weight: 400;
+font-style: italic;
+}
+
+.roboto-medium-italic {
+font-family: "Roboto", serif;
+font-weight: 500;
+font-style: italic;
+}
+
+.roboto-bold-italic {
+font-family: "Roboto", serif;
+font-weight: 700;
+font-style: italic;
+}
+
+.roboto-black-italic {
+font-family: "Roboto", serif;
+font-weight: 900;
+font-style: italic;
+}
