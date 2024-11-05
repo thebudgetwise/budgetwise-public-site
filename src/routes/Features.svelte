@@ -1,6 +1,7 @@
 <script>
 	import pig from '$lib/svg/pig.svg';
 	import coinGeen from '$lib/svg/Coin-green.svg';
+	import foliage from '$lib/svg/foliage.svg';
 </script>
 
 <section class="page-section service" id="features">
@@ -9,9 +10,10 @@
 			<img src={coinGeen} alt="coin" class="coin-green" data-aos="fade-down" data-aos-delay="600" />
 			<img src={pig} alt="pig" class="pig" data-aos="zoom-in" data-aos-delay="400" />
 		</div>
+		<img src={foliage} alt="foliage" class="foliage" data-aos="fade-right" data-aos-delay="400" />
 	</div>
 	<div class="container" data-aos="fade-up" data-aos-delay="100">
-		<h2 class="text-center">Why BWealthy</h2>
+		<h2 class="text-center mb-5">Why BWealthy</h2>
 		<div class="small-container">
 			<div class="card bg-secondary" data-aos="zoom-up" data-aos-delay="600">
 				<div class="card-body">
@@ -79,8 +81,8 @@
 		height: 100%;
 
 		display: grid;
-		grid-template-areas: ". t t t c"
-							 ". t t t ."
+		grid-template-areas: "f t t t c"
+							 "f t t t ."
 							 ". t t t .";
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	}
@@ -107,6 +109,16 @@
 			width: 25%;
 			height: auto;
 		}
+	}
+
+	.foliage {
+		position: relative;
+		grid-area: f;
+		margin-left: -20%;
+		justify-self: start;
+		align-self: end;
+		/* width: 100%; */
+		height: auto;
 	}
 
 	.small-container {
