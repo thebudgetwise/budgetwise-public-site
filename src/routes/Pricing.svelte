@@ -127,6 +127,9 @@
 </section>
 
 <style>
+
+	
+
 	.pricing-card {
 		/* background-color: #fff; */
 		border-radius: 10px;

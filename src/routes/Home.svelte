@@ -4,6 +4,67 @@
 	import cointPink from '$lib/svg/Coin-pink.svg';
 	import pig from '$lib/svg/pig2.svg';
 	import dashboard from '$lib/svg/dashboard.svg';
+
+	import { collection, getDoc, doc, setDoc } from 'firebase/firestore';
+	import { db } from '$lib/firebase';
+
+	let success = false;
+	let error = false;
+	let blockSubmition = false;
+	let repeat = 0;
+	let repeatDiff = 0;
+
+	async function submit(event) {
+		event.preventDefault();
+		if (blockSubmition) return;
+		blockSubmition = true;
+
+		const email = event.target.email.value;
+
+		console.log(email);
+
+		const wishlist = collection(db, 'wishlist');
+
+		try {
+			// Read document
+			const docRef = doc(wishlist, email);
+
+			const document = await getDoc(docRef);
+			if (document.exists()) {
+				repeat++;
+				await new Promise((resolve) => setTimeout(resolve, 2000+repeat*2000));
+
+				console.log('Document data:', document.data());
+
+				const data = document.data();
+				const counter = data.counter + 1;
+
+				await setDoc(docRef, { counter });
+
+				console.log('Document rewritten with ID: ', docRef.id);
+				success = true;
+				
+			} else {
+				// Add a new document with a generated id.
+				await new Promise((resolve) => setTimeout(resolve, repeatDiff*1000));
+
+				await setDoc(docRef, {
+					counter: 1
+				});
+				console.log('Document written with ID: ', docRef.id);
+				success = true;
+
+				repeatDiff++;
+			}
+		} catch (e) {
+			console.error('Error adding document: ', e);
+			error = true;
+		} finally {
+			blockSubmition = false;
+		}
+
+		// console.log(data);
+	}
 </script>
 
 <section class="page-section hero" id="home">
@@ -40,17 +101,104 @@
 	</div>
 	<div class="container" data-aos="fade-up" data-aos-delay="100">
 		<h1>Track Your Spending, Stay <br /> Financially Wise</h1>
-		<h5>Take control of your budget with BWealthy</h5>
-		<!-- CTA -->
-		<a
-			href="#about"
-			class="btn btn-success btn-lg text-uppercase rounded-pill"
-			style="font-weight: 600; font-size: 1.5rem;">Get Started</a
-		>
+
+		<div class="card bg-solid bg-info border-0 subscribe" data-aos="fade-up" data-aos-delay="400">
+			<div class="card-body">
+				<h5>Subscribe to our mailing list!</h5>
+				<!-- CTA -->
+
+				<!-- subscribe form -->
+				<form id="contactForm" on:submit={submit}>
+					{#if !blockSubmition && success}
+						<div class="alert alert-dismissible alert-success">
+							<button
+								type="button"
+								on:click={() => (success = false)}
+								class="btn-close"
+								data-bs-dismiss="alert"
+							></button>
+							<div class="fw-bolder">Thank you for subscribing to our mailing list!</div>
+						</div>
+					{/if}
+					{#if !blockSubmition && error}
+						<div class="alert alert-dismissible alert-danger">
+							<button
+								type="button"
+								on:click={() => (error = false)}
+								class="btn-close"
+								data-bs-dismiss="alert"
+							></button>
+							Error sending message!
+						</div>
+					{/if}
+					{#if blockSubmition}
+						<div class="spinner-border text-primary" role="status">
+							<span class="visually-hidden">Loading...</span>
+						</div>
+					{/if}
+					{#if !blockSubmition && !success && !error}
+						<div class="form-floating input-group mb-3">
+							<input
+								class="form-control"
+								id="email"
+								required
+								type="email"
+								placeholder="name@example.com"
+								data-sb-validations="required,email"
+								data-sb-can-submit="no"
+							/>
+							<label for="email">Email address</label>
+							<div class="invalid-feedback" data-sb-feedback="email:required">
+								An email is required.
+							</div>
+							<div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+
+							<!-- Submit success message-->
+							<!---->
+							<!-- This is what your users will see when the form-->
+							<!-- has successfully submitted-->
+
+							<button
+								class="btn btn-primary"
+								disabled={blockSubmition}
+								type="submit"
+								id="button-addon2"
+							>
+								Subscribe
+							</button>
+						</div>
+					{/if}
+				</form>
+			</div>
+		</div>
 	</div>
 </section>
 
 <style>
+	.subscribe {
+		/* display: flex; */
+		/* justify-content: center; */
+		/* align-items: center; */
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 1rem;
+
+		border-radius: 2rem;
+
+		.form-control {
+			/* border-top-left-radius: 2rem; */
+			/* border-bottom-left-radius: 2rem; */
+			padding-top: 0.5rem;
+		}
+		/* .btn {
+			border-top-right-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+		} */
+		h5 {
+			font-weight: 600;
+		}
+		/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
+	}
 	.page-section {
 		position: relative;
 	}

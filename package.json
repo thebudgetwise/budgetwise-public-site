@@ -35,6 +35,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
-		"aos": "^2.3.4"
+		"aos": "^2.3.4",
+		"firebase": "^11.0.1"
 	}
 }
