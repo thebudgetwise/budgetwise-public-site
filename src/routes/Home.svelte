@@ -8,16 +8,18 @@
 	import { collection, getDoc, doc, setDoc } from 'firebase/firestore';
 	import { db } from '$lib/firebase';
 
+	import { t } from '$lib/i18n';
+
 	let success = false;
 	let error = false;
-	let blockSubmition = false;
+	let blockSubmission = false;
 	let repeat = 0;
 	let repeatDiff = 0;
 
 	async function submit(event) {
 		event.preventDefault();
-		if (blockSubmition) return;
-		blockSubmition = true;
+		if (blockSubmission) return;
+		blockSubmission = true;
 
 		const email = event.target.email.value;
 
@@ -32,7 +34,7 @@
 			const document = await getDoc(docRef);
 			if (document.exists()) {
 				repeat++;
-				await new Promise((resolve) => setTimeout(resolve, 2000+repeat*2000));
+				await new Promise((resolve) => setTimeout(resolve, 2000 + repeat * 2000));
 
 				console.log('Document data:', document.data());
 
@@ -46,7 +48,7 @@
 				
 			} else {
 				// Add a new document with a generated id.
-				await new Promise((resolve) => setTimeout(resolve, repeatDiff*1000));
+				await new Promise((resolve) => setTimeout(resolve, repeatDiff * 1000));
 
 				await setDoc(docRef, {
 					counter: 1
@@ -60,7 +62,7 @@
 			console.error('Error adding document: ', e);
 			error = true;
 		} finally {
-			blockSubmition = false;
+			blockSubmission = false;
 		}
 
 		// console.log(data);
@@ -100,16 +102,16 @@
 		<div></div>
 	</div>
 	<div class="container" data-aos="fade-up" data-aos-delay="100">
-		<h1>Track Your Spending, Stay <br /> Financially Wise</h1>
+		<h1>{$t('home.title')}</h1>
 
-		<div class="card bg-solid bg-info border-0 subscribe" data-aos="fade-up" data-aos-delay="400">
+		<div class="card bg-glass border-0 subscribe" data-aos="fade-up" data-aos-delay="400">
 			<div class="card-body">
-				<h5>Subscribe to our mailing list!</h5>
+				<h5>{$t('home.subscribe.heading')}</h5>
 				<!-- CTA -->
 
 				<!-- subscribe form -->
 				<form id="contactForm" on:submit={submit}>
-					{#if !blockSubmition && success}
+					{#if !blockSubmission && success}
 						<div class="alert alert-dismissible alert-success">
 							<button
 								type="button"
@@ -117,10 +119,10 @@
 								class="btn-close"
 								data-bs-dismiss="alert"
 							></button>
-							<div class="fw-bolder">Thank you for subscribing to our mailing list!</div>
+							<div class="fw-bolder">{$t('home.subscribe.successMessage')}</div>
 						</div>
 					{/if}
-					{#if !blockSubmition && error}
+					{#if !blockSubmission && error}
 						<div class="alert alert-dismissible alert-danger">
 							<button
 								type="button"
@@ -128,15 +130,15 @@
 								class="btn-close"
 								data-bs-dismiss="alert"
 							></button>
-							Error sending message!
+							{$t('home.subscribe.errorMessage')}
 						</div>
 					{/if}
-					{#if blockSubmition}
+					{#if blockSubmission}
 						<div class="spinner-border text-primary" role="status">
 							<span class="visually-hidden">Loading...</span>
 						</div>
 					{/if}
-					{#if !blockSubmition && !success && !error}
+					{#if !blockSubmission && !success && !error}
 						<div class="form-floating input-group mb-3">
 							<input
 								class="form-control"
@@ -147,11 +149,13 @@
 								data-sb-validations="required,email"
 								data-sb-can-submit="no"
 							/>
-							<label for="email">Email address</label>
+							<label for="email">{$t('home.subscribe.email.label')}</label>
 							<div class="invalid-feedback" data-sb-feedback="email:required">
-								An email is required.
+								{$t('home.subscribe.email.requiredFeedback')}
 							</div>
-							<div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+							<div class="invalid-feedback" data-sb-feedback="email:email">
+								{$t('home.subscribe.email.invalidFeedback')}
+							</div>
 
 							<!-- Submit success message-->
 							<!---->
@@ -160,11 +164,11 @@
 
 							<button
 								class="btn btn-primary"
-								disabled={blockSubmition}
+								disabled={blockSubmission}
 								type="submit"
 								id="button-addon2"
 							>
-								Subscribe
+								{$t('home.subscribe.submitButton')}
 							</button>
 						</div>
 					{/if}
@@ -191,9 +195,9 @@
 			padding-top: 0.5rem;
 		}
 		/* .btn {
-			border-top-right-radius: 2rem;
-			border-bottom-right-radius: 2rem;
-		} */
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        } */
 		h5 {
 			font-weight: 600;
 		}
@@ -263,9 +267,9 @@
 			}
 		}
 		/* .a {
-			align-self: end;
-			justify-self: start;
-		} */
+            align-self: end;
+            justify-self: start;
+        } */
 
 		.b {
 			align-self: start;

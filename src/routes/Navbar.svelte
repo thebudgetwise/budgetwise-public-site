@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { t } from '$lib/i18n';
+
 	let distanceScrolled = 0;
 
 	let activeSection = '';
@@ -17,7 +18,10 @@
 			distanceScrolled = document.documentElement.scrollTop;
 			const scrollY = window.scrollY;
 			allSections.forEach((section) => {
-				if (section.offsetTop-200 <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+				if (
+					section.offsetTop - 500 <= scrollY &&
+					section.offsetTop + section.offsetHeight > scrollY
+				) {
 					activeSection = section.id;
 				}
 			});
@@ -27,7 +31,7 @@
 
 <nav class="navbar {distanceScrolled > 0 ? 'bg-glass' : null}  navbar-expand-lg bg-none">
 	<div class="container">
-		<a class="navbar-brand" href="#home">BWealthy</a>
+		<a class="navbar-brand" href="#home">{$t('navbar.brand')}</a>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -47,39 +51,39 @@
 						class="nav-link {activeSection == 'home' ? 'active' : undefined}"
 						aria-current="page"
 						on:click={() => selectSection('home')}
-						href="#">Home</a
+						href="#home">{$t('navbar.home')}</a
 					>
 				</li>
 				<li class="nav-item">
 					<a
 						class="nav-link {activeSection == 'features' ? 'active' : undefined}"
 						on:click={() => selectSection('features')}
-						href="#features">Features</a
+						href="#features">{$t('navbar.features')}</a
 					>
 				</li>
 				<li class="nav-item">
 					<a
 						class="nav-link {activeSection == 'about' ? 'active' : undefined}"
 						href="#about"
-						on:click={() => selectSection('about')}>About</a
+						on:click={() => selectSection('about')}>{$t('navbar.about')}</a
 					>
 				</li>
-				
+				<!-- 				
 				<li class="nav-item">
 					<a
 						class="nav-link {activeSection == 'app' ? 'active' : undefined}"
 						href="#app"
 						on:click={() => selectSection('app')}>App</a
 					>
-				</li>
-				
+				</li> -->
+				<!-- 				
 				<li class="nav-item">
 					<a
 						class="nav-link {activeSection == 'pricing' ? 'active' : undefined}"
 						href="#pricing"
 						on:click={() => selectSection('pricing')}>Pricing</a
 					>
-				</li>
+				</li> -->
 
 				<li class="nav-item">
 					<a
@@ -91,13 +95,13 @@
 			</ul>
 		</div>
 
-		<a
+		<!-- <a
 			class="btn btn-primary btn-sm rounded-pill {activeSection == 'download'
 				? 'active'
 				: undefined} ml-3"
 			on:click={() => selectSection('download')}
 			href="#download">Download</a
-		>
+		> -->
 	</div>
 </nav>
 
@@ -110,8 +114,6 @@
 
 		transition: background-color 0.5s ease;
 	}
-
-	
 
 	.collapse {
 		transition: all 0.5s ease;

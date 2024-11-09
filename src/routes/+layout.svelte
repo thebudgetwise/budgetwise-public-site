@@ -13,7 +13,6 @@
 	onMount(() => {
 		AOS.init();
 	});
-
 	let { children } = $props();
 </script>
 

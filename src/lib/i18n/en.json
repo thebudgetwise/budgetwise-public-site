@@ -1,0 +1,83 @@
+{
+  "navbar": {
+    "brand": "BWealthy",
+    "home": "Home",
+    "features": "Features",
+    "about": "About"
+  },
+  "home": {
+    "title": "Track Your Spending, Stay Financially Wise",
+    "subscribe": {
+      "heading": "Subscribe to our mailing list!",
+      "successMessage": "Thank you for subscribing to our mailing list!",
+      "errorMessage": "Error sending message!",
+      "email": {
+        "label": "Email address",
+        "requiredFeedback": "An email is required.",
+        "invalidFeedback": "Email is not valid."
+      },
+      "submitButton": "Subscribe"
+    }
+  },
+  "features": {
+    "whyBWealthy": "Why BWealthy",
+    "simplify": {
+      "title": "Simplify",
+      "subtitle": "Budgeting with AI",
+      "description": "Spend smart, save smarter!",
+      "button": "Get Started"
+    },
+    "realTime": {
+      "title": "Real-time",
+      "subtitle": "Expense Tracking",
+      "description": "Track your spending as it happens in real-time.",
+      "button": "Get Started"
+    },
+    "learning": {
+      "title": "Learning",
+      "subtitle": "Your personal finance coach",
+      "description": "Powered by AI to help you save more",
+      "button": "Get Started"
+    },
+    "reports": {
+      "title": "Reports",
+      "subtitle": "& Analytics",
+      "description": "Get insights into your spending habits with detailed reports",
+      "button": "Get Started"
+    },
+    "adapts": {
+      "title": "Adapts",
+      "subtitle": "Budgeting that adapts to you",
+      "description": "AI insights to keep your spending in check",
+      "button": "Get Started"
+    }
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "We'd love to hear from you!",
+    "fullName": {
+      "label": "Full name",
+      "requiredFeedback": "A full name is required."
+    },
+    "phone": {
+      "label": "Phone number",
+      "requiredFeedback": "A phone number is required."
+    },
+    "email": {
+      "label": "Email address",
+      "requiredFeedback": "An email is required.",
+      "invalidFeedback": "Email is not valid."
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Enter your message here...",
+      "requiredFeedback": "A message is required."
+    },
+    "submitSuccessMessage": {
+      "title": "Form submission successful!",
+      "description": "To activate this form, sign up at"
+    },
+    "submitErrorMessage": "Error sending message!",
+    "submitButton": "Submit"
+  }
+}

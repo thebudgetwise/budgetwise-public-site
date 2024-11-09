@@ -1,0 +1,84 @@
+{
+  "navbar": {
+    "brand": "BWealthy",
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "about": "À propos"
+  },
+  "home": {
+    "title": "Suivez vos dépenses, restez financièrement sage",
+    "subscribe": {
+      "heading": "Abonnez-vous à notre liste de diffusion !",
+      "successMessage": "Merci de vous être abonné à notre liste de diffusion !",
+      "errorMessage": "Erreur lors de l'envoi du message !",
+      "email": {
+        "label": "Adresse e-mail",
+        "requiredFeedback": "Un e-mail est requis.",
+        "invalidFeedback": "L'e-mail n'est pas valide."
+      },
+      "submitButton": "S'abonner"
+    }
+  },
+  "features": {
+    "whyBWealthy": "Pourquoi BWealthy",
+    "simplify": {
+      "title": "Simplifier",
+      "subtitle": "Budgétisation avec IA",
+      "description": "Dépensez intelligemment, économisez plus intelligemment!",
+      "button": "Commencer"
+    },
+    "realTime": {
+      "title": "Temps réel",
+      "subtitle": "Suivi des dépenses",
+      "description": "Suivez vos dépenses en temps réel.",
+      "button": "Commencer"
+    },
+    "learning": {
+      "title": "Financier",
+      "subtitle": "Votre coach financier personnel",
+      "description": "Propulsé par l'IA pour vous aider à économiser plus",
+      "button": "Commencer"
+    },
+    "reports": {
+      "title": "Rapports",
+      "subtitle": "& Analyses",
+      "description": "Obtenez des informations sur vos habitudes de dépenses avec des rapports détaillés",
+      "button": "Commencer"
+    },
+    "adapts": {
+      "title": "S'adapte",
+      "subtitle": "Un budget qui s'adapte à vous",
+      "description": "Des insights IA pour garder vos dépenses sous contrôle",
+      "button": "Commencer"
+    }
+  },
+  "contact": {
+    "heading": "Contactez-nous",
+    "subheading": "Nous aimerions avoir de vos nouvelles !",
+    "fullName": {
+      "label": "Nom complet",
+      "requiredFeedback": "Un nom complet est requis."
+    },
+    "phone": {
+      "label": "Numéro de téléphone",
+      "requiredFeedback": "Un numéro de téléphone est requis."
+    },
+    "email": {
+      "label": "Courriel",
+      "requiredFeedback": "Un courriel est requis.",
+      "invalidFeedback": "Le courriel n'est pas valide."
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Entrez votre message ici...",
+      "requiredFeedback": "Un message est requis.",
+      "invalidFeedback": "L'e-mail n'est pas valide."
+    },
+    "submitSuccessMessage": {
+      "title": "Soumission du formulaire réussie !",
+      "description": "Pour activer ce formulaire, inscrivez-vous à"
+    },
+    "submitErrorMessage": "Erreur lors de l'envoi du message !",
+    "submitButton": "Soumettre"
+  }
+}

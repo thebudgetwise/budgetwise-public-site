@@ -2,6 +2,7 @@
 	import pig from '$lib/svg/pig.svg';
 	import coinGeen from '$lib/svg/Coin-green.svg';
 	import foliage from '$lib/svg/foliage.svg';
+	import { t } from '$lib/i18n';
 </script>
 
 <section class="page-section service" id="features">
@@ -13,56 +14,56 @@
 		<img src={foliage} alt="foliage" class="foliage" data-aos="fade-right" data-aos-delay="400" />
 	</div>
 	<div class="container" data-aos="fade-up" data-aos-delay="100">
-		<h2 class="text-center mb-5">Why BWealthy</h2>
+		<h2 class="text-center mb-5">{$t('features.whyBWealthy')}</h2>
 		<div class="small-container">
 			<div class="card bg-secondary" data-aos="zoom-up" data-aos-delay="600">
-				<div class="card-body">
+				<div class="card-body px-2">
 					<div class="bg-success circle"><i class="bi-laptop fs-1"></i></div>
-					<h2 class="card-title">Home</h2>
-					<h5 class="card-title">Easy-to-use Interface</h5>
-					<p class="card-text">Intuitive design to simplify your budgeting experience.</p>
-					<a href="#" class="btn btn-primary rounded-pill">Get Started</a>
+					<h2 class="card-title text-white">{$t('features.simplify.title')}</h2>
+					<h5 class="card-title">{$t('features.simplify.subtitle')}</h5>
+					<p class="card-text">{$t('features.simplify.description')}</p>
+					<a href="#" class="btn btn-primary rounded-pill">{$t('features.simplify.button')}</a>
 				</div>
 			</div>
 
 			<div class="card bg-success" data-aos="zoom-up" data-aos-delay="700">
-				<div class="card-body">
+				<div class="card-body px-2">
 					<div class=" circle"><i class="bi-phone fs-1"></i></div>
-					<h2 class="card-title text-white">Realtime</h2>
-					<h5 class="card-title">Expense Tracking</h5>
-					<p class="card-text">Track your spending as it happens in real-time.</p>
-					<a href="#app" class="btn btn-primary rounded-pill">Learn more!</a>
+					<h2 class="card-title text-white">{$t('features.realTime.title')}</h2>
+					<h5 class="card-title">{$t('features.realTime.subtitle')}</h5>
+					<p class="card-text">{$t('features.realTime.description')}</p>
+					<a href="#" class="btn btn-primary rounded-pill">{$t('features.realTime.button')}</a>
 				</div>
 			</div>
 
 			<div class="card bg-primary" data-aos="zoom-up" data-aos-delay="800">
-				<div class="card-body">
-					<div class="bg-silver circle">$</div>
-					<h2 class="card-title text-white">Pricing</h2>
-					<h5 class="card-title">Expose Tracking</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet</p>
-					<a href="#pricing" class="btn btn-primary rounded-pill">Learn more!</a>
+				<div class="card-body px-2">
+					<div class="bg-silver circle"><i class="bi-person fs-1"></i></div>
+					<h2 class="card-title text-white">{$t('features.learning.title')}</h2>
+					<h5 class="card-title">{$t('features.learning.subtitle')}</h5>
+					<p class="card-text">{$t('features.learning.description')}</p>
+					<a href="#" class="btn btn-primary rounded-pill">{$t('features.learning.button')}</a>
 				</div>
 			</div>
 
 			<div class="card bg-info" data-aos="zoom-up" data-aos-delay="900">
-				<div class="card-body">
+				<div class="card-body px-2">
 					<div class="circle"><i class="bi-table fs-1"></i></div>
 					<h2 class="card-title text-white">Reports</h2>
 					<h5 class="card-title">& Analytics</h5>
-					<p class="card-text">Get insights into your spending habits with detailed reports.</p>
-					<a href="#contact" class="btn btn-primary rounded-pill">Learn more!</a>
+					<p class="card-text">Get insights into your spending habits with detailed reports</p>
+					<a href="#" class="btn btn-primary rounded-pill">Get Started</a>
 				</div>
 			</div>
 
 			<div class="card bg-secondary" data-aos="zoom-up" data-aos-delay="1000">
 				<div class="card-body-bg"></div>
 				<div class="card-body px-2">
-					<div class="bg-success circle"><i class="bi-person fs-1"></i></div>
-					<h4 class="card-title">Customizable</h4>
-					<h5 class="card-title">Categories</h5>
-					<p class="card-text">Create categories that suit your financial goals.</p>
-					<a href="#app" class="btn btn-primary rounded-pill">Learn more!</a>
+					<div class="bg-success circle">$</div>
+					<h2 class="card-title text-white">Adapts</h2>
+					<h5 class="card-title">Budgeting that adapts to you</h5>
+					<p class="card-text">AI insights to keep your spending in check</p>
+					<a href="#" class="btn btn-primary rounded-pill">Get Started</a>
 				</div>
 			</div>
 		</div>

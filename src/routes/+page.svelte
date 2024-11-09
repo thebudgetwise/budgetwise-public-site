@@ -18,7 +18,7 @@
 <Hero />
 <Features />
 <About />
-<App />
-<Pricing />
+<!-- <App /> -->
+<!-- <Pricing /> -->
 <Contact />
-<Download />
+<!-- <Download /> -->
