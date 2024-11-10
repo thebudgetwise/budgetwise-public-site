@@ -75,8 +75,7 @@
       "invalidFeedback": "L'e-mail n'est pas valide."
     },
     "submitSuccessMessage": {
-      "title": "Soumission du formulaire réussie !",
-      "description": "Pour activer ce formulaire, inscrivez-vous à"
+      "title": "Merci de nous avoir contactés !"
     },
     "submitErrorMessage": "Erreur lors de l'envoi du message !",
     "submitButton": "Soumettre"

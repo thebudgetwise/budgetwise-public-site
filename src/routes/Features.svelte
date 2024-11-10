@@ -130,7 +130,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(194px, 1fr));
 	}
 	.service {
-		background-color: #d9d7d8;
+		background-color: #ffffffaa;
 	}
 
 	.card {

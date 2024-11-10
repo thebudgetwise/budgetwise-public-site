@@ -2,9 +2,12 @@ import { derived, writable } from "svelte/store";
 
 import en from "./en.json";
 import fr from "./fr.json";
+import { getLocaleFromNavigator } from "svelte-i18n";
 
-export const locale = writable("fr");
+const current = getLocaleFromNavigator();
+
 export const locales = ["en", "fr"];
+export const locale = writable(locales.includes(current) ? current : "fr");
 
 function translate(locale, key, vars) {
   // Let's throw some errors if we're trying to use keys/locales that don't exist.

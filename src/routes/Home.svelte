@@ -5,6 +5,8 @@
 	import pig from '$lib/svg/pig2.svg';
 	import dashboard from '$lib/svg/dashboard.svg';
 
+	import background from '$lib/images/abstract_low_poly_elegant_banner_design_0111.jpg';
+
 	import { collection, getDoc, doc, setDoc } from 'firebase/firestore';
 	import { db } from '$lib/firebase';
 
@@ -69,6 +71,7 @@
 	}
 </script>
 
+<!-- <img src={background} alt="background" class="bg" /> -->
 <section class="page-section hero" id="home">
 	<div class="art">
 		<div class="empty"></div>
@@ -179,6 +182,17 @@
 </section>
 
 <style>
+	.bg {
+		position: absolute;
+		top: -200px;
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		/* object-fit: cover; */
+		/* object-position: center; */
+		z-index: 0;
+		background-repeat: repeat-y;
+	}
 	.subscribe {
 		/* display: flex; */
 		/* justify-content: center; */

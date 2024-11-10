@@ -74,8 +74,7 @@
       "requiredFeedback": "A message is required."
     },
     "submitSuccessMessage": {
-      "title": "Form submission successful!",
-      "description": "To activate this form, sign up at"
+      "title": "Thank you for contacting us!"
     },
     "submitErrorMessage": "Error sending message!",
     "submitButton": "Submit"

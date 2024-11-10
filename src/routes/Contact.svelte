@@ -1,13 +1,45 @@
 <script>
 	import { t } from '$lib/i18n';
 
-	function submit(event) {
+	import { collection, addDoc } from 'firebase/firestore';
+	import { db } from '$lib/firebase';
+
+	let success = false;
+	let error = false;
+	let blockSubmission = false;
+	let repeat = 0;
+
+	async function submit(event) {
 		event.preventDefault();
-		// console.log(event);
-		const form = event.target;
-		const formData = new FormData(form);
-		const data = Object.fromEntries(formData.entries());
-		console.log(data);
+		if (blockSubmission) return;
+		blockSubmission = true;
+		const contactRef = collection(db, 'contact');
+
+		try {
+			// add a new document with a generated id.
+			repeat++;
+			await new Promise((resolve) => setTimeout(resolve, 2000 + repeat * 500));
+
+			await addDoc(contactRef, {
+				name: event.target.name.value,
+				email: event.target.email.value,
+				phone: event.target.phone.value,
+				message: event.target.message.value
+			});
+
+			// clear form
+			event.target.name.value = '';
+			event.target.email.value = '';
+			event.target.phone.value = '';
+			event.target.message.value = '';
+			
+			success = true;
+		} catch (e) {
+			error = true;
+			console.error('Error adding document: ', e);
+		} finally {
+			blockSubmission = false;
+		}
 	}
 </script>
 
@@ -99,25 +131,29 @@
 					<!---->
 					<!-- This is what your users will see when the form-->
 					<!-- has successfully submitted-->
-					<div class="d-none" id="submitSuccessMessage">
-						<div class="text-center mb-3">
-							<div class="fw-bolder">{$t('contact.submitSuccessMessage.title')}</div>
-							{$t('contact.submitSuccessMessage.description')}
-							<br />
-							<a href=""></a>
+					{#if success}
+						<div id="submitSuccessMessage">
+							<div class="text-center mb-3">
+								<div class="fw-bolder">{$t('contact.submitSuccessMessage.title')}</div>
+							</div>
 						</div>
-					</div>
+					{/if}
 					<!-- Submit error message-->
 					<!---->
 					<!-- This is what your users will see when there is-->
 					<!-- an error submitting the form-->
-					<div class="d-none" id="submitErrorMessage">
-						<div class="text-center text-danger mb-3">{$t('contact.submitErrorMessage')}</div>
-					</div>
+					{#if error}
+						<div id="submitErrorMessage">
+							<div class="text-center text-danger mb-3">{$t('contact.submitErrorMessage')}</div>
+						</div>
+					{/if}
 					<!-- Submit Button-->
 					<div class="d-grid" data-aos="fade-up" data-aos-delay="700">
-						<button class="btn btn-primary rounded-pill btn-lg" id="submitButton" type="submit"
-							>{$t('contact.submitButton')}</button
+						<button
+							disabled={blockSubmission}
+							class="btn btn-primary rounded-pill btn-lg"
+							id="submitButton"
+							type="submit">{$t('contact.submitButton')}</button
 						>
 					</div>
 				</form>
