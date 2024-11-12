@@ -5,8 +5,6 @@
 	import pig from '$lib/svg/pig2.svg';
 	import dashboard from '$lib/svg/dashboard.svg';
 
-	import background from '$lib/images/abstract_low_poly_elegant_banner_design_0111.jpg';
-
 	import { collection, getDoc, doc, setDoc } from 'firebase/firestore';
 	import { db } from '$lib/firebase';
 
@@ -107,7 +105,7 @@
 	<div class="container" data-aos="fade-up" data-aos-delay="100">
 		<h1>{$t('home.title')}</h1>
 
-		<div class="card bg-glass border-0 subscribe" data-aos="fade-up" data-aos-delay="400">
+		<div class="card bg-solid bg-info border-0 subscribe" data-aos="fade-up" data-aos-delay="400">
 			<div class="card-body">
 				<h5>{$t('home.subscribe.heading')}</h5>
 				<!-- CTA -->

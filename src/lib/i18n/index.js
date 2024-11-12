@@ -2,12 +2,9 @@ import { derived, writable } from "svelte/store";
 
 import en from "./en.json";
 import fr from "./fr.json";
-import { getLocaleFromNavigator } from "svelte-i18n";
-
-const current = getLocaleFromNavigator();
 
 export const locales = ["en", "fr"];
-export const locale = writable(locales.includes(current) ? current : "fr");
+export const locale = writable("fr");
 
 function translate(locale, key, vars) {
   // Let's throw some errors if we're trying to use keys/locales that don't exist.
@@ -39,3 +36,11 @@ function reducer(object, path) {
 export const t = derived(locale, ($locale) => (key, vars = {}) =>
   translate($locale, key, vars)
 );
+
+export function setLocale(newLocale) {;
+  if (!locales.includes(newLocale)) {
+    throw new Error(`Locale not supported: ${newLocale}`);
+  }
+  locale.set(newLocale);
+  localStorage.setItem('lang', newLocale);
+}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { t } from '$lib/i18n';
+	import { locale, setLocale, t } from '$lib/i18n';
 
 	let distanceScrolled = 0;
 
@@ -95,13 +95,12 @@
 			</ul>
 		</div>
 
-		<!-- <a
-			class="btn btn-primary btn-sm rounded-pill {activeSection == 'download'
-				? 'active'
-				: undefined} ml-3"
-			on:click={() => selectSection('download')}
-			href="#download">Download</a
-		> -->
+		<button
+			type="button"
+			class="btn btn-primary btn-sm ml-3"
+			on:click={() => setLocale($locale === 'en' ? 'fr' : 'en')}
+			>{$locale === 'en' ? 'Français' : 'English'}</button
+		>
 	</div>
 </nav>
 

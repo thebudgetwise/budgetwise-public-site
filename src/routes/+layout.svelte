@@ -9,9 +9,17 @@
 	import AOS from 'aos';
 
 	import { onMount } from 'svelte';
+	import { locale } from '$lib/i18n';
 
 	onMount(() => {
 		AOS.init();
+
+		
+		const localPrefLang = localStorage.getItem('lang');
+		if (localPrefLang) {
+			locale.set(localPrefLang);
+		}
+
 	});
 	let { children } = $props();
 </script>
