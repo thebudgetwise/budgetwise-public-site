@@ -8,8 +8,8 @@
   "home": {
     "title": "Track Your Spending, Stay Financially Wise",
     "subscribe": {
-      "heading": "Subscribe to our mailing list!",
-      "successMessage": "Thank you for subscribing to our mailing list!",
+      "heading": "Let me know when its ready!",
+      "successMessage": "Thank you!",
       "errorMessage": "Error sending message!",
       "email": {
         "label": "Email address",
@@ -78,5 +78,11 @@
     },
     "submitErrorMessage": "Error sending message!",
     "submitButton": "Submit"
+  },
+  "about": {
+    "heading": "AI-Powered Financial Guidance",
+    "description1": "Our application leverages the power of artificial intelligence to help you make smart decisions about your expenses, budget, and financial goals. With personalized insights and real-time tracking, you can stay on top of your finances and achieve your financial objectives with ease.",
+    "description2": "Whether you're looking to save more, spend wisely, or plan for the future, our AI-driven platform provides the tools and guidance you need to succeed. Join us and take control of your financial journey today!",
+    "button": "Get Started!"
   }
 }

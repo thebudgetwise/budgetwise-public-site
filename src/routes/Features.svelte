@@ -49,10 +49,10 @@
 			<div class="card bg-info" data-aos="zoom-up" data-aos-delay="900">
 				<div class="card-body px-2">
 					<div class="circle"><i class="bi-table fs-1"></i></div>
-					<h2 class="card-title text-white">Reports</h2>
-					<h5 class="card-title">& Analytics</h5>
-					<p class="card-text">Get insights into your spending habits with detailed reports</p>
-					<a href="#" class="btn btn-primary rounded-pill">Get Started</a>
+					<h2 class="card-title text-white">{$t('features.reports.title')}</h2>
+					<h5 class="card-title">{$t('features.reports.subtitle')}</h5>
+					<p class="card-text">{$t('features.reports.description')}</p>
+					<a href="#" class="btn btn-primary rounded-pill">{$t('features.learning.button')}</a>
 				</div>
 			</div>
 
@@ -60,10 +60,10 @@
 				<div class="card-body-bg"></div>
 				<div class="card-body px-2">
 					<div class="bg-success circle">$</div>
-					<h2 class="card-title text-white">Adapts</h2>
-					<h5 class="card-title">Budgeting that adapts to you</h5>
-					<p class="card-text">AI insights to keep your spending in check</p>
-					<a href="#" class="btn btn-primary rounded-pill">Get Started</a>
+					<h2 class="card-title text-white">{$t('features.adapts.title')}</h2>
+					<h5 class="card-title">{$t('features.adapts.subtitle')}</h5>
+					<p class="card-text">{$t('features.adapts.description')}</p>
+					<a href="#" class="btn btn-primary rounded-pill">{$t('features.adapts.button')}</a>
 				</div>
 			</div>
 		</div>

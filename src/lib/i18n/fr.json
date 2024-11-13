@@ -8,8 +8,8 @@
   "home": {
     "title": "Suivez vos dépenses, restez financièrement sage",
     "subscribe": {
-      "heading": "Abonnez-vous à notre liste de diffusion !",
-      "successMessage": "Merci de vous être abonné à notre liste de diffusion !",
+      "heading": "Faites-moi savoir quand ce sera prêt!",
+      "successMessage": "Merci!",
       "errorMessage": "Erreur lors de l'envoi du message !",
       "email": {
         "label": "Adresse e-mail",
@@ -79,5 +79,11 @@
     },
     "submitErrorMessage": "Erreur lors de l'envoi du message !",
     "submitButton": "Soumettre"
+  },
+  "about": {
+    "heading": "Conseils financiers alimentés par l'IA",
+    "description1": "Notre application exploite la puissance de l'intelligence artificielle pour vous aider à prendre des décisions intelligentes concernant vos dépenses, votre budget et vos objectifs financiers. Avec des informations personnalisées et un suivi en temps réel, vous pouvez rester au top de vos finances et atteindre vos objectifs financiers en toute simplicité.",
+    "description2": "Que vous cherchiez à économiser plus, à dépenser judicieusement ou à planifier pour l'avenir, notre plateforme alimentée par l'IA vous fournit les outils et les conseils dont vous avez besoin pour réussir. Rejoignez-nous et prenez le contrôle de votre parcours financier dès aujourd'hui!",
+    "button": "Commencer!"
   }
 }
